@@ -4,6 +4,7 @@
   "description": "A database of information about the state of our global environment.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,5 +30,8 @@
     "express": "^4.17.1",
     "mongoose": "^5.6.11",
     "puppeteer": "^1.19.0"
+  },
+  "engines": {
+    "node": "v12.5.0"
   }
 }
