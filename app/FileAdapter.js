@@ -30,19 +30,5 @@ module.exports = class FileAdapter {
           console.log(`Data written in file ${newFilePath}`);
     });
   };
-
-  // Grab the last file in the folder
-  static getLastFileInFolder = folderPath => {
-    // set last file
-    let lastFile = ""
-    // read the folder
-    fs.readdir(folderPath, (err, files) => {
-      // handle errors
-      if (err) return console.error(err.stack);
-      // Get the last file
-      lastFile = files[files.length -1]
-    })
-    // return the last file
-    return lastFile
-  }
+  
 };
