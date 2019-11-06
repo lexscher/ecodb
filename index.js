@@ -8,6 +8,8 @@ const express = require("express");
 const app = express();
 // Get json data
 const data = require("./json/worldbank-0.json");
+// use ejs
+app.set("view engine", "ejs");
 
 // set port
 const port = process.env.PORT || 3000;
@@ -15,7 +17,7 @@ app.set("port", port);
 
 // Home
 app.get("/", (req, res) => {
-  res.json({ data });
+  res.render("pages/index");
 });
 // GET all countries
 app.get("/api/v1/countries", (req, res) => {
