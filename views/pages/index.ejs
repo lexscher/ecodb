@@ -4,18 +4,7 @@
     <% include ../partials/head %>
     <style>
       @import url('https://fonts.googleapis.com/css?family=Fira+Code:400,600&display=swap');
-      /* RESET & MAIN */
-      <% include ../styles/reset %>
-      <% include ../styles/main %>
-      /* UTILITIES */
-      <% include ../styles/utilities %>
-      /* ANIMATIONS */
-      /* HEADER */
-      <% include ../styles/header %>
-      /* PAGES */
-      <% include ../styles/pages %>
-      /* Parts/Components */
-      <% include ../styles/parts %>
+      <% include ../partials/combinedStyles %>
     </style>
   </head>
   <body>
@@ -25,19 +14,7 @@
     </header>
     <div id="root"></div>
     <script>
-      /* main js */
-      <% include ../script/app %>
-      /* NavBar js */
-      <% include ../script/NavBar %>
-      /* Page Handler js */
-      <% include ../script/PageHandler %>
-      /* Home Page js */
-      <% include ../script/Home %>
-      /* About Page js */
-      <% include ../script/About %>
-      /* Api Page js */
-      <% include ../script/Api %>
-      /* Contributions/Guidelines Page js */
+      <% include ../partials/combinedScripts %>
     </script>
   </body>
 </html>
