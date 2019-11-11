@@ -1,0 +1,47 @@
+class Api {
+  constructor() {
+    // Create api page
+    this.page = document.createElement("div");
+    // add class names and id
+    this.page.id = "api-page";
+    this.page.classList.add("main-content", "hidden");
+    // add inner html to the api page
+    this.page.innerHTML = `
+    <h1>Connecting to the api.</h1>
+
+    <!-- 
+    Once more api endpoints are added, this will have a dropdown selector
+        Example:
+    <select name="api endpoint set" id="select-api-set">
+        <option value="land-usage">Land usage across the globe</option>
+        <option value="debt">Debt across the globe</option>
+    </select>
+    -->
+
+    <h2>Data about land usage in each country.</h2>
+    <div class="endpoints">
+        <h4>Endpoints:</h4>
+        <ul>
+            <li>
+                <code>GET 'https://ecodb.herokuapp.com/api/v1/countries' </code> 
+            </li>
+            <li>
+                <code>GET 'https://ecodb.herokuapp.com/api/v1/countries/:id' </code>
+            </li>
+        </ul>
+    </div>
+    <div class="endpoints-notes">
+        <h4>Notes:</h4>
+        <p>
+            <i>You can get the land usage for the world from </i><b>id: 214</b>
+        </p>
+        <p>
+            <i>You can get the land usage for regions from </i><b>id: 215 - id: 221</b>
+        </p>
+        <p>
+            <i>You can get the land usage for low-high income areas from </i><b>id: 222 - id: 225</b>
+        </p>
+    </div>
+      `;
+  }
+}

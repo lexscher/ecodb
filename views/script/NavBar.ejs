@@ -1,0 +1,30 @@
+class NavBar {
+  constructor() {
+    // Grab the nav bar
+    this.nav = document.querySelector("#nav-bar");
+
+    // Create new buttons
+    // - Home
+    this.homePageButton = document.createElement("button");
+    this.homePageButton.classList.add("button--nav");
+    this.homePageButton.id = "btn-to-home";
+    // - Api
+    this.apiPageButton = document.createElement("button");
+    this.apiPageButton.classList.add("button--nav");
+    this.apiPageButton.id = "btn-to-api";
+    // - About
+    this.aboutPageButton = document.createElement("button");
+    this.aboutPageButton.classList.add("button--nav");
+    this.aboutPageButton.id = "btn-to-about";
+
+    // Add them to the navbar
+    this.nav.appendChild(this.homePageButton);
+    this.nav.appendChild(this.apiPageButton);
+    this.nav.appendChild(this.aboutPageButton);
+
+    // Give them some inner text
+    this.homePageButton.innerText = "home";
+    this.apiPageButton.innerText = "api";
+    this.aboutPageButton.innerText = "about";
+  }
+}
