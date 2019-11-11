@@ -1,0 +1,29 @@
+console.log("JavaScript is running.");
+
+let page, nav;
+
+document.addEventListener("DOMContentLoaded", event => {
+  nav = new NavBar();
+  page = new PageHandler();
+  navDelegation();
+});
+
+// Nav bar delegation
+let navDelegation = () => {
+  document.body.addEventListener("click", event => {
+    switch (event.target.id) {
+      case "btn-to-home":
+        page.togglePage("home");
+        break;
+      case "btn-to-api":
+        page.togglePage("api");
+        break;
+      case "btn-to-about":
+        page.togglePage("about");
+        break;
+
+      default:
+        break;
+    }
+  });
+};
