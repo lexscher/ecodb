@@ -1,0 +1,52 @@
+class PageHandler {
+  constructor() {
+    // Grab the "root" div
+    this.root = document.querySelector("#root");
+
+    // Create the pages
+    this.home = new Home();
+    this.about = new About();
+    this.api = new Api();
+
+    // Append them to the root
+    this.root.appendChild(this.home.page);
+    this.root.appendChild(this.about.page);
+    this.root.appendChild(this.api.page);
+  }
+
+  // Should help when we add more and more pages
+  // It will default to the home page.
+  togglePage = page => {
+    // Call this method to hide every page
+    this.hideAllPages();
+    console.log(page);
+    switch (page) {
+      case "home":
+        // Show the home page
+        this.home.page.classList.remove("hidden");
+        break;
+      case "about":
+        // Show the about page
+        this.about.page.classList.remove("hidden");
+        break;
+      case "api":
+        // Show the api page
+        this.api.page.classList.remove("hidden");
+        break;
+
+      default:
+        // Show the home page
+        this.home.page.classList.remove("hidden");
+        break;
+    }
+  };
+
+  hideAllPages = () => {
+    // Hide the home page
+    this.home.page.classList.add("hidden");
+    // Hide the about page
+    this.about.page.classList.add("hidden");
+    // Hide the api page
+    this.api.page.classList.add("hidden");
+  };
+}
