@@ -8,17 +8,19 @@ Technologies:
 - Express
 - Puppeteer
 
-Deployed on [Heroku](https://www.heroku.com)
+Deployed on [Heroku](https://www.heroku.com).
+
+You can check it out [here](https://ecodb.herokuapp.com/).
 
 Endpoints:
 
 - GET All Countries
 
-`"https://ecodb.herokuapp.com/api/countries"`
+`"https://ecodb.herokuapp.com/api/v1/countries"`
 
 - GET One Country
 
-`"https://ecodb.herokuapp.com/api/countries/:id"`
+`"https://ecodb.herokuapp.com/api/v1/countries/:id"`
 
 The JSON data is an array of objects, where
 each item looks like this:
